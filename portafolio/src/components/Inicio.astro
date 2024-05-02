@@ -1,0 +1,27 @@
+---
+import Badge from "./Badge.astro";
+const { class: id } = Astro.props;
+---
+
+<section class="flex my-20 items-center">
+  <section class="">
+    <h1 class="text-5xl font-bold flex gap-x-3 pb-6 text-balance">
+      Hola, soy Uxue ✌️!!
+      <div class="flex items-center">
+        <Badge>Disponible para trabajar</Badge>
+      </div>
+    </h1>
+    <h2 class="opacity-70 text-xl text-balance">
+      Estudiante de Ingeniería en Informática en el IPN. Apasionado por el
+      desarrollo web, especialmente en frontend.Soy de <span
+        class="text-green-500 opacity-60">México</span
+      > 🌮.<br />Estoy abierto a nuevas oportunidades para seguir creciendo en
+      esta área. 😊
+    </h2>
+  </section>
+  <img
+    class="size-48 rounded-full border-spacing-1"
+    src="./public/UxueImage.webp"
+    alt="uxue foto"
+  />
+</section>
