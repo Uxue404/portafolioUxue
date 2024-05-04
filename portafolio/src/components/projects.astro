@@ -1,0 +1,52 @@
+---
+import { TypeFlags } from "typescript";
+
+const PROJECTS = [
+    {
+        title: "Tienda de libros online",
+        description:
+            "Desarrollo de una tienda de libros en línea que permite a los usuarios buscar, ver detalles y comprar libros. Incluye un carrito de compras y opciones de pago.",
+        link: "https://www.ejemplo.com/tienda-de-libros",
+        tags: ["React", "Node.js", "Express", "MongoDB"],
+    },
+    {
+        title: "Plataforma de blogging",
+        description:
+            "Desarrollo de una plataforma de blogging donde los usuarios pueden registrarse, crear publicaciones, comentar y compartir contenido. Incluye un panel de administración para gestionar publicaciones y usuarios.",
+        link: "https://www.ejemplo.com/plataforma-de-blogging",
+        tags: ["Vue.js", "Firebase", "Tailwind CSS", "GraphQL"],
+    },
+    {
+        title: "Sistema de gestión de inventario",
+        description:
+            "Desarrollo de un sistema de gestión de inventario para empresas que les permite realizar un seguimiento de su stock de productos, gestionar pedidos y generar informes de ventas.",
+        link: "https://www.ejemplo.com/sistema-de-gestion-de-inventario",
+        tags: ["Node.js", "Express", "MySQL", "Bootstrap"],
+    },
+    {
+        title: "Plataforma de streaming de música",
+        description:
+            "Desarrollo de una plataforma de streaming de música donde los usuarios pueden explorar, reproducir y crear listas de reproducción de sus canciones favoritas. Incluye funciones sociales para seguir a otros usuarios y descubrir nueva música.",
+        link: "https://www.ejemplo.com/plataforma-de-streaming-de-musica",
+        tags: ["React", "Redux", "Django", "PostgreSQL"],
+    },
+];
+
+---
+
+{
+    PROJECTS.map(({ title, description, link, tags }) => (
+        <article class="p-4 h-lg rounded-lg bg-customCard">
+            <h2>{title}</h2>
+            <h4 class="text-pretty opacity-80">{description}</h4>
+            <ul>
+                {tags.map((tag) => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <a href={link} target="_blank">
+                Visita
+            </a>
+        </article>
+    ))
+}

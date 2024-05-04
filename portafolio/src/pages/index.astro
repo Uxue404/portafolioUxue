@@ -3,23 +3,25 @@ import Badge from "../components/Badge.astro";
 import Incio from "../components/Inicio.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import Projects from "../components/projects.astro";
 ---
 
 <Layout
   title="Portfolio Uxue Reyes, Desarrollador y Programador Web JR Front-End Jr"
   description="Contrata a Uxue, para el desarrollo de landing pages, "
 >
-  <main class="">
-    <SectionContainer id="">
-      <section class="flex my-20 items-center">
+  <main class="p-6">
+    <SectionContainer class="incio">
+      <section class="flex mt-20 mb-5 items-center">
         <section class="">
-          <h1 class="text-5xl font-bold flex gap-x-3 pb-6 text-balance">
+          <h1 class="text-4xl font-bold flex gap-x-3 pb-6 text-balance">
             Hola, soy Uxue ✌️!!
             <div class="flex items-center">
               <Badge>Disponible para trabajar</Badge>
             </div>
           </h1>
-          <h2 class="opacity-70 text-xl text-balance">
+          <h2 class="opacity-70 text-lg text-balance">
             Estudiante de Ingeniería en Informática en el IPN. Apasionado por el
             desarrollo web, especialmente en frontend.Soy de <span
               class="text-green-500 opacity-60">México</span
@@ -33,29 +35,32 @@ import Layout from "../layouts/Layout.astro";
           alt="uxue foto"
         />
       </section>
-    </SectionContainer>
-    <SectionContainer class="socialMedia">
-      <h1 class="text-4xl mb-10">Redes Sociales</h1>
-      <div class="mx-3">
-        <button
-          type="button"
-          class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 hover:scale-110 transition"
-        >
-          GitHub
-        </button>
-        <button
-          type="button"
-          class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 hover:scale-110 transition"
-        >
+      <div class="">
+        <Button link="https://github.com/Uxue404"> Github </Button>
+        <Button link="https://www.linkedin.com/in/uxue-reyes-3247701a8/">
           LinkedIn
-        </button>
-        <button
-          type="button"
-          class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 hover:scale-110 transition"
+        </Button>
+        <Button
+          link="https://drive.google.com/file/d/1W5cFmqKitJKUKLV12qVTdfnSY6NW97gt/view?usp=sharing"
         >
           Descarga mi CV
-        </button>
+        </Button>
       </div>
+    </SectionContainer>
+
+    <SectionContainer class="">
+      <h2 class="mb-5 text-4xl">Proyectos</h2>
+      <section class="grid grid-cols-2 gap-10">
+        <Projects />
+      </section>
+    </SectionContainer>
+
+    <SectionContainer>
+      <h1>Proyectos</h1>
+    </SectionContainer>
+
+    <SectionContainer>
+      <h1>contactame</h1>
     </SectionContainer>
   </main>
 </Layout>
